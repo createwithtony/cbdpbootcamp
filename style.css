@@ -1,0 +1,317 @@
+/* ---------- Base ---------- */
+:root {
+  --primary: #1d4497;
+  --primary-dark: #1b48c6;
+  --dark: #0f172a;
+  --text: #1e293b;
+  --muted: #64748b;
+  --light: #f1f5f9;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--light);
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+  background: linear-gradient(135deg, var(--dark), var(--primary));
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0 0 25px;
+  opacity: 0.9;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+nav a:hover {
+  background: var(--white);
+  color: var(--primary-dark);
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+section {
+  background: var(--white);
+  max-width: 900px;
+  margin: 0 auto 25px;
+  padding: 25px 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+main section {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* The overview and contact sections sit outside main in your HTML */
+body > section,
+body > p {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary-dark);
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+strong {
+  color: var(--dark);
+}
+
+/* ---------- Links ---------- */
+main a,
+section a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+main a:hover,
+section a:hover {
+  color: var(--primary-dark);
+}
+
+/* ---------- Lists ---------- */
+ul,
+ol {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li::marker {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  padding-bottom: 10px;
+}
+
+th,
+td {
+  padding: 12px 24px;
+  text-align: left;
+}
+
+thead th {
+  background: var(--primary);
+  color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--light);
+}
+
+tbody tr:hover {
+  background: #dbeafe;
+}
+
+td {
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- Form ---------- */
+form p {
+  margin: 0 0 18px;
+}
+
+label {
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+  accent-color: var(--primary);
+}
+
+input[type="checkbox"] + label {
+  font-weight: 400;
+}
+
+button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 28px;
+  font: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ---------- About page ---------- */
+/* The about page has no header or main, so style its direct children */
+body > h1 {
+  background: linear-gradient(135deg, var(--dark), var(--primary));
+  color: var(--white);
+  margin: 0 0 30px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+body > p,
+body > ul {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body > h4:has(ul) {
+  padding: 0;
+}
+
+body > p ul {
+  background: var(--white);
+  padding: 20px 20px 20px 45px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+img {
+  display: block;
+  max-width: auto;
+  height: auto;
+  margin: 30px auto;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
